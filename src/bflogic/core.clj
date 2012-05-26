@@ -2,6 +2,8 @@
   (:refer-clojure :exclude [==])
   (:use [clojure.core.logic]))
 
+;;  --------------------------------------------------------
+;;   Helper fn
 (defn to-number 
     "turns a seq of numbers (eg [1 2 3 4]) into a number (eg 1234)"
     ([l] (to-number l 0))
