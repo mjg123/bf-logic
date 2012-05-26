@@ -21,14 +21,14 @@
                    ;; run* is the core.logic fn to yield _all_ solutions
                    ;; that match the constraints
 
-            (fresh [q1 q2 q3 q4 q5 q6 q7 q8 q9 n]  ;; fresh introduces new logic vars 
+            (fresh [q1 q2 q3 q4 q5 q6 q7 q8 q9 n]      ;; fresh introduces new logic vars 
 
                 (permo q [1 2 3 4 5 6 7 8 9])          ;; our answer is a permutation of 1-9
 
                 (== q [q1 q2 q3 q4 q5 q6 q7 q8 q9])    ;; bind q1-q9 as the elements of q
 
                 (project [q1 q2 q3 q4 q5 q6 q7 q8 q9]  ;; project allows us to treat q1-q9 as
-                                                   ;; numbers rather than unbound logic vars
+                                                       ;; numbers rather than unbound logic vars
 
                     (== 1 (Math/abs (- q1 q2)))        ;; the ends are easy to specify
                     (== 1 (Math/abs (- q8 q9)))
